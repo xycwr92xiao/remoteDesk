@@ -1,0 +1,51 @@
+# --- 构建目录与编译产物 ---
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+debug/
+release/
+Debug/
+Release/
+x64/
+x86/
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+*.o
+*.obj
+*.pdb
+
+# --- CMake 生成文件 ---
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+Makefile
+*.ninja
+
+# --- Qt 生成与本地配置 ---
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qm
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+*.user
+*.user.*
+.qmake.stash
+.qtcreator/
+
+# --- IDE 与系统临时文件 ---
+.vscode/
+.vs/
+Thumbs.db
+Desktop.ini
+*.autosave
+*.tmp
+*.log
