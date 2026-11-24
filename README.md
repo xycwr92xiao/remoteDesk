@@ -20,6 +20,7 @@ xhost +SI:localuser:root >/dev/null 2>&1 || true
 fi
 
 #这里的参数可设置新的端口和密码
+
 exec /opt/remoteDesk/bin/remote_server_linux 5902 "changeme123"
 
 根据设置的端口要放开对应的端口访问权限，例如服务端：
@@ -27,9 +28,11 @@ exec /opt/remoteDesk/bin/remote_server_linux 5902 "changeme123"
 麒麟服务器默认使用 firewalld 管理防火墙。先查看当前规则：
 
 sudo firewall-cmd --list-all
+
 检查 ports: 行里有没有 5902/tcp。如果没有，需要手动放行并重新加载：
 
 sudo firewall-cmd --permanent --add-port=5902/tcp
+
 sudo firewall-cmd --reload
 
 <img width="332" height="276" alt="lianjie" src="https://github.com/user-attachments/assets/df3279f9-5ab7-4539-9a70-082300c5c7be" />
